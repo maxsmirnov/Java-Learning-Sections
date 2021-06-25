@@ -1,0 +1,34 @@
+{
+  "sections": [
+    {
+      "id": 1,
+      "name": "Collections",
+      "questions": [],
+      "learnDate": ""
+    },
+    {
+      "id": 2,
+      "name": "Multithreading",
+      "questions": [],
+      "learnDate": ""
+    },
+    {
+      "id": 3,
+      "name": "SQL",
+      "questions": [],
+      "learnDate": ""
+    },
+    {
+      "id": 4,
+      "name": "Memory Model",
+      "questions": [],
+      "learnDate": ""
+    },
+    {
+      "id": 5,
+      "name": "File NIO",
+      "questions": [],
+      "learnDate": ""
+    }
+  ]
+}
