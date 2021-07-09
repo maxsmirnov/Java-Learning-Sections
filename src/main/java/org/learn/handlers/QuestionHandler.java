@@ -15,9 +15,7 @@ public class QuestionHandler implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        System.out.println(parentSection.getId());
-        System.out.println(parentSection.getName());
-        LearningController.getState().showQuestions();
+        LearningController.getState().showQuestions(parentSection);
     }
 
 }

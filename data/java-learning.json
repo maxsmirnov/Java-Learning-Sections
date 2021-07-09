@@ -3,7 +3,16 @@
     {
       "id": 1,
       "name": "Collections",
-      "questions": [],
+      "questions": [
+        {
+          "question": "Воопрос?",
+          "answer": "ответ"
+        },
+        {
+          "question": "Воопрос?",
+          "answer": "ответ"
+        }
+      ],
       "learnDate": ""
     },
     {

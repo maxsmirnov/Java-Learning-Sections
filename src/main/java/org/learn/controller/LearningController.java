@@ -1,6 +1,7 @@
 package org.learn.controller;
 
 import javafx.stage.Stage;
+import org.learn.datatranslation.entities.Section;
 import org.learn.forms.QuestionForm;
 import org.learn.forms.SectionForm;
 
@@ -20,8 +21,8 @@ public class LearningController {
         primaryStage.show();
     }
 
-    public void showQuestions() {
-        primaryStage.setScene(QuestionForm.getScene());
+    public void showQuestions(Section parentSection) {
+        primaryStage.setScene(QuestionForm.getScene(parentSection));
         primaryStage.show();
     }
 
