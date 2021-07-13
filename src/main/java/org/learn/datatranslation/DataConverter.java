@@ -29,4 +29,14 @@ public class DataConverter {
         }
         return data;
     }
+
+    public String parseLearningData(LearningData data) {
+        String parseData = "";
+        try {
+            parseData = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(data);
+        } catch (Exception exc) {
+            System.out.println("need logger");
+        }
+        return parseData;
+    }
 }
