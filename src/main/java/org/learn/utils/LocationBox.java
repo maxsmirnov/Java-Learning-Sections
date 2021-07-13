@@ -10,7 +10,7 @@ public class LocationBox {
     private int currentCell = 1;
     private ButtonLocation currentLoc = new ButtonLocation();
 
-    private int maxColumn = 9;
+    private int maxColumn = 7;
     private int maxRow = 24;
 
     public void put() {

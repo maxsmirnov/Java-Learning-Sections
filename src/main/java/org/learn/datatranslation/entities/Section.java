@@ -12,6 +12,13 @@ public class Section {
 
     }
 
+    public Section(Long id, String name, List<Question> questions, String learnDate) {
+        this.id = id;
+        this.name = name;
+        this.questions = questions;
+        this.learnDate = learnDate;
+    }
+
     public Long getId() {
         return id;
     }

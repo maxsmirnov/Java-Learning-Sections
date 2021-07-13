@@ -1,11 +1,11 @@
 package org.learn.datatranslation;
 
 
+import javafx.scene.image.Image;
 import org.learn.tools.Settings;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -42,11 +42,35 @@ public class FileManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return data;
     }
 
-    public void saveData() {
+    public Image loadImage(String name) {
+        StringBuilder filePath = new StringBuilder();
+        filePath.append(mainDirectory)
+                .append(Settings.FILE_DELIMITER)
+                .append(Settings.DATA_PATH)
+                .append(Settings.FILE_DELIMITER)
+                .append(name);
+        System.out.println(filePath.toString());
 
+        File file = new File(filePath.toString());
+        return new Image(file.toURI().toString());
+    }
+
+    public void saveData(String data) {
+        StringBuilder filePath = new StringBuilder();
+        filePath.append(mainDirectory)
+                .append(Settings.FILE_DELIMITER)
+                .append(Settings.DATA_PATH)
+                .append(Settings.FILE_DELIMITER)
+                .append(Settings.FILE_DATA_NAME);
+        System.out.println(filePath.toString());
+        try {
+            FileOutputStream outputStream = new FileOutputStream(filePath.toString());
+            outputStream.write(data.getBytes(StandardCharsets.UTF_8));
+        } catch (Exception exc) {
+            System.out.println("error " + exc);
+        }
     }
 }
